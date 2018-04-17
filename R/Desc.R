@@ -802,7 +802,8 @@ print.Desc <- function(x, digits=NULL, plotit=NULL, nolabel=FALSE, sep=NULL, ...
         print.Desc.header(x, ...)
 
     } else {
-      print(unclass(x), ...)
+      # print(unclass(x), ...)
+      warning(paste0('No output method for objects of class', x$class))
     }
 
   }

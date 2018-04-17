@@ -765,15 +765,15 @@ print.Desc <- function(x, digits=NULL, plotit=NULL, nolabel=FALSE, sep=NULL, ...
 
     # define the separator, "-------..." if not given
     sep <- Coalesce(sep, x$sep, paste(rep("-", (getOption("width") - 2)), collapse = ""))
-    cat(sep, "\n")
-
-    if (!identical(x$main, NA))
-      cat(x$main)
-    if (!is.null(x$label) && !nolabel)
-      cat(" :", strwrap(x$label, indent = 2, exdent = 2), sep = "\n")
-    if (!identical(x$main, NA))
-      cat("\n")
-    cat("\n")
+    # cat(sep, "\n")
+    # 
+    # if (!identical(x$main, NA))
+    #   cat(x$main)
+    # if (!is.null(x$label) && !nolabel)
+    #   cat(" :", strwrap(x$label, indent = 2, exdent = 2), sep = "\n")
+    # if (!identical(x$main, NA))
+    #   cat("\n")
+    # cat("\n")
 
     if(any(x$class %in% c("numeric", "integer", "factor", "ordered", "character",
                           "logical", "table", "matrix", "xtabs", "Date",

@@ -1,6 +1,4 @@
 
-
-
 Desc <- function (x, ..., main=NULL, plotit=NULL, wrd = NULL) {
 
   if (is.null(wrd))
@@ -782,13 +780,13 @@ print.Desc <- function(x, digits=NULL, plotit=NULL, nolabel=FALSE, sep=NULL, ...
                           "factfact", "numnum", "numfact", "factnum"))) {
 
       # escalate to logical if the vector is empty
-      if(x$n == 0){
-        print.Desc.logical(x, digits, ...)
-
-      } else {
-        # do class dispatching by hand
-        eval(parse(text=gettextf("print.Desc.%s(x, digits, ...)", x$class)))
-      }
+      # if(x$n == 0){
+      #   print.Desc.logical(x, digits, ...)
+      # 
+      # } else {
+      #   # do class dispatching by hand
+      #   eval(parse(text=gettextf("print.Desc.%s(x, digits, ...)", x$class)))
+      # }
 
       if(plotit){
         eval(parse(text=gettextf("plot.Desc.%s(x, ...)", x$class)))
